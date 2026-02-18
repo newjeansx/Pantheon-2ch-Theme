@@ -41,7 +41,8 @@ https://github.com/newjeansx/Pantheon-2ch-Theme
    
 Чтобы включить тему, нужно зайти в Настройки → Другое → Поставить галочку "Пользовательский CSS" → 
 Нажать на карандаш → Скопировать-вставить весь текст ниже и сохранить. Обновить страницу. 
-   
+
+
 @import url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/loader.css");
 
 :root {
