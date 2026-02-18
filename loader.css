@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.0
+   Version: 1.0.1
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -101,7 +101,7 @@ html:root {
 
 	--pantheon-blur-1: blur(1px);
 	--pantheon-blur-2: blur(3px);
-	--pantheon-blur-3: blur(5px);
+	--pantheon-blur-3: blur(7px);
 	--pantheon-blur-4: blur(14px);
 
 	--pantheon-radius-1: 10px;
@@ -122,7 +122,8 @@ html:root {
 	--pantheon-shadow-3: 0 6px 14px rgba(0,0,0,0.21), 0 1px 0 rgba(255,255,255,0.06) inset;
 	
 	--pantheon-text-shadow-1: 0 1px 2px rgba(0,0,0,0.35);
-	--pantheon-text-shadow-2: 1px 1px 3px rgba(0,0,0,0.5);
+	--pantheon-text-shadow-2: 0 1px 2px rgba(0,0,0,0.4);
+	--pantheon-text-shadow-3: 1px 1px 3px rgba(0,0,0,0.5);
 
 	--pantheon-highlight-shadow-1: inset 0 1px 0 rgba(255,255,255,0.15), inset 0 0 8px rgba(255,255,255,0.08);
 	--pantheon-highlight-shadow-2: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 0 8px rgba(255,255,255,0.08);
@@ -553,8 +554,8 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 	background-color: var(--pantheon-bg-color-light-1);
 	box-shadow: var(--pantheon-shadow-2);
 
-	backdrop-filter: var(--pantheon-blur-2);
-	-webkit-backdrop-filter: var(--pantheon-blur-2);
+	backdrop-filter: var(--pantheon-blur-3);
+	-webkit-backdrop-filter: var(--pantheon-blur-3);
 
 	scrollbar-color: var(--theme_sbthumb) var(--theme_sbtrack);
 	scrollbar-width: thin;
@@ -665,7 +666,7 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.0\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.1\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -887,8 +888,8 @@ svg.fav__fa:hover,
 	background-color: var(--pantheon-bg-color-light-1);
 	box-shadow: var(--pantheon-shadow-2);
 
-	backdrop-filter: var(--pantheon-blur-2);
-	-webkit-backdrop-filter: var(--pantheon-blur-2);
+	backdrop-filter: var(--pantheon-blur-3);
+	-webkit-backdrop-filter: var(--pantheon-blur-3);
 	
 	transition: background-color 1s ease,
 }
@@ -899,8 +900,9 @@ svg.fav__fa:hover,
 
 .post_preview {
 	background-color: var(--pantheon-bg-color-light-2);
-	backdrop-filter: var(--pantheon-blur-3);
-	-webkit-backdrop-filter: var(--pantheon-blur-3);
+	
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
 .post__message a,
@@ -978,17 +980,17 @@ svg.fav__fa:hover,
 
 .post__ophui {
 	color: #46a646 !important;
-	text-shadow: var(--pantheon-text-shadow-2);
+	text-shadow: var(--pantheon-text-shadow-3);
 }
 
 .post__mod {
 	color: #5FA4EA !important;
-	text-shadow: var(--pantheon-text-shadow-2);
+	text-shadow: var(--pantheon-text-shadow-3);
 }
 
 .post__adm {
 	color: #ec74ec !important;
-	text-shadow: var(--pantheon-text-shadow-2);
+	text-shadow: var(--pantheon-text-shadow-3);
 }
 
 /* ===== Пост - Детали - Иконка ===== */
@@ -1413,7 +1415,7 @@ svg.fav__fa:hover,
 
 /* ===== Пост - NSFW ===== */
 
-.file__nsfw { /* ДОДЕЛАТЬ КОГДА СДЕЛАЮ ПОСТ ПРЕВЬЮ КАТРТИНКИ АНИМКИ */
+.file__nsfw {
 	line-height: 1.3;
 	z-index: 3;
 
@@ -2570,6 +2572,7 @@ input.ah__export {
 
 
 a {
+    text-shadow: var(--pantheon-text-shadow-2);
 	transition: color var(--pantheon-anim-fast) ease;
 }
 
@@ -2700,7 +2703,7 @@ input[type="checkbox"]:checked::after {
 
 font[color="red"] {
 	color: #ff6868 !important;
-	text-shadow: var(--pantheon-text-shadow-2);
+	text-shadow: var(--pantheon-text-shadow-3);
 }
 
 /* ====== Предупреждение 18+ ===== */
