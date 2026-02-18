@@ -34,3 +34,29 @@ https://github.com/newjeansx/Pantheon-2ch-Theme
 Основной цвет темы задаётся параметром:
 
    --pantheon-theme: #74b6f5;
+
+
+                            🛠️ CSS
+   
+Чтобы включить тему, нужно зайти в Настройки → Другое → Поставить галочку "Пользовательский CSS" → 
+Нажать на карандаш → Скопировать-вставить весь текст ниже и сохранить. Обновить страницу. 
+   
+@import url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/loader.css");
+
+:root {
+--pantheon-bg-image: url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/newjeans-bg.jpeg");
+--pantheon-theme: #74b6f5;
+}
+
+
+/ ---
+
+Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ.
+
+Актуальный FAQ по настройке и обновлению:
+https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@main/faq.md
+
+Обратная связь:
+newjeansx@proton.me
+
+--- /
