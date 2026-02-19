@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.4
+   Version: 1.0.5
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -34,6 +34,9 @@ body::before {
 	background:
 		linear-gradient(var(--pantheon-bg-overlay), var(--pantheon-bg-overlay)),
 		var(--pantheon-bg-image),
+		url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/newjeans-bg.jpeg"),
+		url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg"),
+		url("https://i.imgur.com/3zwOhMH.jpeg"),
 		var(--pantheon-theme);
 	background-position: center;
 	background-size: cover;
@@ -85,11 +88,7 @@ html:root {
 /* ===== Переменные Pantheon ===== */
 
 :root {
-	--pantheon-bg-image: 
-		url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/newjeans-bg.jpeg"),
-        url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg"),
-		url("https://i.imgur.com/3zwOhMH.jpeg");
-		
+	--pantheon-bg-image: none;	
 	--pantheon-bg-overlay: rgba(0,0,0,0.22);	
 	--pantheon-theme: #74b6f5;	
 
@@ -670,7 +669,7 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.4\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.5\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
