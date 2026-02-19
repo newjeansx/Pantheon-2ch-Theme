@@ -46,7 +46,7 @@ https://github.com/newjeansx/Pantheon-2ch-Theme
 @import url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/loader.css");
 
 :root {
---pantheon-bg-image: url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/newjeans-bg.jpeg");
+--pantheon-bg-image: url("https://i.imgur.com/3zwOhMH.jpeg");
 --pantheon-theme: #74b6f5;
 }
 
