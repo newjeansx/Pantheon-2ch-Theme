@@ -32,12 +32,10 @@ body::before {
 	pointer-events: none;
 
 	background:
-		linear-gradient(var(--pantheon-bg-overlay), var(--pantheon-bg-overlay)),
-		var(--pantheon-bg-image),
-		url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@latest/newjeans-bg.jpeg"),
-		url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg"),
-		url("https://i.imgur.com/3zwOhMH.jpeg"),
-		var(--pantheon-theme);
+        linear-gradient(var(--pantheon-bg-overlay), var(--pantheon-bg-overlay)),
+        var(--pantheon-bg-image, var(--pantheon-bg-default)),
+        var(--pantheon-theme);
+
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -88,7 +86,10 @@ html:root {
 /* ===== Переменные Pantheon ===== */
 
 :root {
-	--pantheon-bg-image: none;	
+	--pantheon-bg-default:
+        url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@main/newjeans-bg.jpeg"),
+        url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg"),
+        url("https://i.imgur.com/3zwOhMH.jpeg");	
 	--pantheon-bg-overlay: rgba(0,0,0,0.22);	
 	--pantheon-theme: #74b6f5;	
 
