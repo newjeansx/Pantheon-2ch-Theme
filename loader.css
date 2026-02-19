@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.2
+   Version: 1.0.3
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -225,8 +225,8 @@ html:root {
 	background-color: var(--pantheon-bg-color-light-1);
 	box-shadow: var(--pantheon-shadow-2);
 	
-	backdrop-filter: var(--pantheon-blur-1);
-	-webkit-backdrop-filter: var(--pantheon-blur-1);
+	/*backdrop-filter: var(--pantheon-blur-1);
+	-webkit-backdrop-filter: var(--pantheon-blur-1);*/
 }
 
 .header__opts_hovered {
@@ -667,7 +667,7 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.2\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.3\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -941,6 +941,7 @@ svg.fav__fa:hover,
 
 .post_type_watched .post__anon {
 	color: var(--pantheon-theme);
+	font-weight: bold;
 }
 
 .unkfunc {
@@ -959,6 +960,20 @@ svg.fav__fa:hover,
 
 .qr_reply .qr__footer a:hover {
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
+}
+
+.thread_hidden {
+	color: var(--theme_default_alttext);
+	margin: 10px 35px 10px 20px;
+	padding: 14px;
+	
+	border-radius: var(--pantheon-radius-2);
+	border: var(--pantheon-border-light-1);
+	background-color: var(--pantheon-bg-color-light-1);
+	box-shadow: var(--pantheon-shadow-2);
+	
+	backdrop-filter: var(--pantheon-blur-2);
+	-webkit-backdrop-filter: var(--pantheon-blur-2);
 }
 
 /* ===== Пост - Детали ===== */
