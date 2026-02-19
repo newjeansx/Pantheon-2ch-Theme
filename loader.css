@@ -32,9 +32,11 @@ body::before {
 	pointer-events: none;
 
 	background:
-        linear-gradient(var(--pantheon-bg-overlay), var(--pantheon-bg-overlay)),
-        var(--pantheon-bg-image, var(--pantheon-bg-default)),
+    linear-gradient(var(--pantheon-bg-overlay), var(--pantheon-bg-overlay)),
+        var(--pantheon-bg-image),
+        var(--pantheon-bg-default),
         var(--pantheon-theme);
+
 
 	background-position: center;
 	background-size: cover;
@@ -87,9 +89,8 @@ html:root {
 
 :root {
 	--pantheon-bg-default:
-        url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme@main/newjeans-bg.jpeg"),
-        url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg"),
-        url("https://i.imgur.com/3zwOhMH.jpeg");	
+        url("https://i.imgur.com/3zwOhMH.jpeg"),
+        url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-bg.jpeg");
 	--pantheon-bg-overlay: rgba(0,0,0,0.22);	
 	--pantheon-theme: #74b6f5;	
 
@@ -322,7 +323,6 @@ html[data-style="muon"] body::after,
 html[data-style="neutron"] body::after,
 html[data-style="gurochan"] body::after {
 	content:
-		url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/not-supported.gif")
 		"\A\AЭта тема совместима только со стилем Makaba.\AВыберите Makaba в меню стилей.";
 
 	position: fixed;
@@ -346,6 +346,11 @@ html[data-style="gurochan"] body::after {
 	white-space: pre-line;
 
 	pointer-events: none;
+
+	background:
+		url("https://i.imgur.com/3RKurIx.gif") center 35% no-repeat,
+		url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/not-supported.gif") center 35% no-repeat,
+		#18191a;
 }
 
 html[data-style="makabaverdana"] .header__opts,
@@ -401,7 +406,11 @@ html[data-style="gurochan"] .header__opts_sticky {
     content: "";
     width: 22px;
     height: 22px;
-    background: url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/newjeans-logo.png") center/contain no-repeat;
+    
+	background:
+        url("https://i.imgur.com/tgI7GGm.png") center/contain no-repeat,
+        url("https://raw.githubusercontent.com/newjeansx/Pantheon-2ch-Theme/main/newjeans-logo.png") center/contain no-repeat;
+		
     opacity: 0.55;
     transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.18s ease, filter 0.25s ease;
 }
