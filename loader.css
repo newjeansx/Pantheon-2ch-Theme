@@ -2676,6 +2676,9 @@ select {
 	
 	border-radius: 7px;
 	text-shadow: none;
+	
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
 }
 
 .post__message span[style*="background"] {
