@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.8
+   Version: 1.0.9
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -692,7 +692,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.8\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.9\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
