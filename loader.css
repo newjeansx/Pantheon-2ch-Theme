@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.5
+   Version: 1.0.6
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -667,7 +667,7 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.5\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.6\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -946,7 +946,7 @@ svg.fav__fa:hover,
 
 .unkfunc {
 	padding: 2px 8px 4px 10px;
-	display: inline-flex;
+	display: inline-block;
 	
 	background: linear-gradient( to right, var(--pantheon-bg-color-light-3), rgba(255,255,255,0) );
 	border-left: 2px solid color-mix(in srgb, var(--pantheon-theme) 95%, black);
