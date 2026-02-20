@@ -24,7 +24,7 @@ https://github.com/newjeansx/Pantheon-2ch-Theme
 1) ИЗОБРАЖЕНИЕ
 Укажите URL изображения (ПКМ → копировать ссылку на изображение):
 
-   --pantheon-bg-image: url("https://cdn.jsdelivr.net/gh/newjeansx/Pantheon-2ch-Theme/newjeans-bg.jpeg");
+   --pantheon-bg-image: url("https://i.imgur.com/3zwOhMH.jpeg");
 
 Использовать цвет вместо изображения:
 
