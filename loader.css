@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.1.0
+   Version: 1.1.1
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -196,6 +196,12 @@ html:root {
 	overflow: hidden;
 	border-radius: var(--pantheon-radius-1);
 	border: 2px solid rgba(255,255,255,.13);
+	
+	transition: border var(--pantheon-anim-slow) var(--pantheon-ease);
+}
+
+.mmm a:hover {
+	border: 2px solid rgba(255, 255, 255, .33);
 }
 
 .mmm__img {
@@ -208,8 +214,8 @@ html:root {
 }
 
 .mmm a:hover .mmm__img {
-	transform: scale(1.03);
-	filter: brightness(1.1);
+	transform: scale(1.02);
+	filter: brightness(1.08);
 }
 
 .plashque {
@@ -464,12 +470,16 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 	display: block;
 	margin: 0 auto;
 	width: fit-content;
+	overflow: hidden;
 	
 	border: 2px solid rgba(255, 255, 255, .13);
 	border-radius: var(--pantheon-radius-2);
+	
+	transition: border var(--pantheon-anim-slow) var(--pantheon-ease);
+}
 
-	border-radius: var(--pantheon-radius-2);
-	overflow: hidden;
+.header__logo:hover {
+	border: 2px solid rgba(255, 255, 255, .33);
 }
 
 .header__logo img {
@@ -477,12 +487,12 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 	
 	transition: 
 	    transform var(--pantheon-anim-slow) var(--pantheon-ease),
-		brightness var(--pantheon-anim-slow) var(--pantheon-ease);
+		filter  var(--pantheon-anim-slow) var(--pantheon-ease);
 }
 
 .header__logo img:hover {
-	transform: scale(1.05);
-	filter: brightness(1.1);
+	transform: scale(1.04);
+	filter: brightness(1.08);
 }
 
 /* ===== Инфо ===== */
@@ -692,7 +702,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.0\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.1\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -1216,7 +1226,7 @@ svg.fav__fa:hover,
 
 .post__icon:has(img[src*="guglogo"]) {
 	background-color: #fff;
-	padding: 2px 0 1px 2px;
+	padding-top: 2px;
 }
 
 .post__icon:has(img[src*="ivelogo"]) {
@@ -1838,8 +1848,8 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 	border: var(--pantheon-border-light-1);
 	background-color: var(--pantheon-bg-color-dark-1);
 
-	backdrop-filter: var(--pantheon-blur-1);
-	-webkit-backdrop-filter: var(--pantheon-blur-1);
+	backdrop-filter: var(--pantheon-blur-2);
+	-webkit-backdrop-filter: var(--pantheon-blur-2);
 
 	transition:
 		background-color var(--pantheon-anim-normal) ease,
@@ -2720,7 +2730,12 @@ select {
 }
 
 .post__message span[style*="background"] {
+	padding: 0 5px 0 5px;
 	text-shadow: none;
+	border-radius: 4px;
+	
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
 }
 
 .icon:hover, .postform__mu:hover, .filer__drag-area:hover {
@@ -2817,4 +2832,10 @@ font[color="red"] {
 
 	backdrop-filter: var(--pantheon-blur-4);
 	-webkit-backdrop-filter: var(--pantheon-blur-4);
+	
+	transition: color var(--pantheon-anim-fast) ease;
+}
+
+.warningbox a:hover{
+	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
