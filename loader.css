@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.0.9
+   Version: 1.1.0
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -692,7 +692,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.0.9\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.0\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -1961,54 +1961,92 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 
 /* ===== Статистика ===== */
 
+.autorefresh  {
+	color: #ccc;
+}
+
+.cntnt__main .tn__item.desktop {
+	color: #fff0;
+	text-shadow: none;
+}
+
+.cntnt__main .tn__item.desktop {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tn__item.desktop span:has(input) {
+	order: 10;
+}
+
+.tn__item.desktop {
+    flex-wrap: wrap;
+}
+
+.tn span[title="Постеры"] {
+	margin-right: 18px;
+}
+
 .tn span[title="Всего постов в треде"],
-.tn span[title="Всего файлов в треде"] {
+.tn span[title="Всего файлов в треде"],
+.tn span[title="Постеры"] {
 	display: inline;
+	padding: 2px 8px 2px 2px;
+	color: #ccc;
+	
+	border-radius: var(--pantheon-radius-2);
+	border: var(--pantheon-border-light-1);
+	background-color: var(--pantheon-bg-color-light-1);
+	box-shadow: var(--pantheon-shadow-1);
+	
+	backdrop-filter: var(--pantheon-blur-1);
+	-webkit-backdrop-filter: var(--pantheon-blur-1);
 }
 
 .tn span[title="Всего постов в треде"] .icon,
-.tn span[title="Всего файлов в треде"] .icon {
+.tn span[title="Всего файлов в треде"] .icon,
+.tn span[title="Постеры"] .icon {
 	display: none !important;
 }
 
 .tn span[title="Всего постов в треде"]::before {
 	content: "";
 	display: inline-block;
+	opacity: .5;
 
 	width: 20px;
 	height: 20px;
-	margin-left: 10px;
+	margin-left: 5px;
 	vertical-align: -4px;
 
-	background-color: rgba(255,255,255,.5);
-
-	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12C21 16.4183 16.9706 20 12 20C10.4386 20 8.96529 19.6736 7.6875 19.0938L3 20L4.15625 16.0312C3.42588 14.8673 3 13.4881 3 12C3 7.58172 7.02944 4 12 4C16.9706 4 21 7.58172 21 12Z'/%3E%3C/svg%3E") center/contain no-repeat;
-	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12C21 16.4183 16.9706 20 12 20C10.4386 20 8.96529 19.6736 7.6875 19.0938L3 20L4.15625 16.0312C3.42588 14.8673 3 13.4881 3 12C3 7.58172 7.02944 4 12 4C16.9706 4 21 7.58172 21 12Z'/%3E%3C/svg%3E") center/contain no-repeat;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 0 1-.522 1.756.75.75 0 0 0 .584 1.143 5.976 5.976 0 0 0 3.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-2-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z' clip-rule='evenodd'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .tn span[title="Всего файлов в треде"]::before {
 	content: "";
 	display: inline-block;
+	opacity: .5;
 
 	width: 20px;
 	height: 20px;
 	margin-left: 5px;
 	vertical-align: -4px;
 
-	background-color: rgba(255,255,255,.5);
-
-	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5ZM7 8A2 2 0 1 0 7 12A2 2 0 0 0 7 8ZM5 19H19L14 13L11 16L9 14L5 19Z'/%3E%3C/svg%3E") center/contain no-repeat;
-	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5ZM7 8A2 2 0 1 0 7 12A2 2 0 0 0 7 8ZM5 19H19L14 13L11 16L9 14L5 19Z'/%3E%3C/svg%3E") center/contain no-repeat;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M4.75 3A1.75 1.75 0 0 0 3 4.75v2.752l.104-.002h13.792c.035 0 .07 0 .104.002V6.75A1.75 1.75 0 0 0 15.25 5h-3.836a.25.25 0 0 1-.177-.073L9.823 3.513A1.75 1.75 0 0 0 8.586 3H4.75ZM3.104 9a1.75 1.75 0 0 0-1.673 2.265l1.385 4.5A1.75 1.75 0 0 0 4.488 17h11.023a1.75 1.75 0 0 0 1.673-1.235l1.384-4.5A1.75 1.75 0 0 0 16.896 9H3.104Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-.tn span[title="Постеры"] > .icon {
-	width: 18px;
-	height: 18px;
-	margin-left: 5px;
-	vertical-align: -3px;
+.tn span[title="Постеры"]::before {
+	content: "";
+	display: inline-block;
+	opacity: .5;
 
-	fill: rgba(255,253,253,.5);
-	cursor: default;
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	vertical-align: -4px;
+
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 
