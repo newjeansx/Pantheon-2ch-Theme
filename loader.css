@@ -886,14 +886,18 @@ hr,
 }
 
 svg.fav__fa,
-.bb__update.icon {
-	fill: var(--theme_default_alttext) !important;
+.bb__update.icon,
+.sticker__button,
+.stickerpack-meta a {
+	fill: var(--theme_default_icon) !important;
 	transition: fill var(--pantheon-anim-fast) ease;
 }
 
 svg.fav__fa:hover,
-.bb__update.icon:hover {
-	fill: var(--theme_default_hover) !important;
+.bb__update.icon:hover,
+.sticker__button:hover,
+.stickerpack-meta a:hover {
+	fill: var(--theme_default_alttext) !important;
 }
 
 .fav__fa_type_update.icon_type_spin,
@@ -2002,7 +2006,7 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 .tn span[title="Всего файлов в треде"],
 .tn span[title="Постеры"] {
 	display: inline;
-	padding: 2px 8px 2px 2px;
+	padding: 2px 9px 2px 2px;
 	color: #ccc;
 	
 	border-radius: var(--pantheon-radius-2);
@@ -2087,7 +2091,7 @@ textarea[name="comment"] {
 	color: #fdfdfd5e;
 }
 
-/* ===== Форма — элементы ===== */
+/* ===== Форма — Элементы ===== */
 
 .postform__limits {
 	right: 20px;
@@ -2112,6 +2116,35 @@ textarea[name="comment"] {
 
 .postarea__btn.icon:hover {
 	opacity: 1;
+}
+
+/* ===== Форма — Элементы - Стикеры ===== */
+
+.stickerpack-name a {
+	color: #d7d7d7;
+	transition: color var(--pantheon-anim-fast) ease;
+}
+
+.stickerpack-name a:hover {
+	color: var(--theme_default_hover);
+}
+
+#frequent-stickers .stickerpack-name {
+	color: #d7d7d7;
+	transition: color var(--pantheon-anim-fast) ease;
+}
+
+#frequent-stickers .stickerpack-name:hover {
+    color: var(--theme_default_hover);
+}
+
+.stickerpack-name .stickerpack-meta {
+	color: var(--pantheon-theme);
+	transition: color var(--pantheon-anim-fast) ease;
+}
+
+.stickerpack-name:hover .stickerpack-meta {
+    color: color-mix(in srgb, var(--pantheon-theme) 75%, white);
 }
 
 /* ===== Панель форматирования ===== */
