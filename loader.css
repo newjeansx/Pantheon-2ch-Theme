@@ -251,9 +251,6 @@ html:root {
 	border-bottom: var(--pantheon-border-light-1);
 	background-color: var(--pantheon-bg-color-light-1);
 	box-shadow: var(--pantheon-shadow-2);
-	
-	/*backdrop-filter: var(--pantheon-blur-1);
-	-webkit-backdrop-filter: var(--pantheon-blur-1);*/
 }
 
 .header__opts_hovered {
@@ -397,8 +394,6 @@ html[data-style="gurochan"] .header__opts_sticky {
 }
 
 /* ===== Ночной режим ===== */
-
-/* Ночной режим — иконка (только при прямом hover на неё) */
 
 .nm__bullet,
 .nm__icon {
