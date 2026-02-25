@@ -1709,15 +1709,18 @@ body ._captcha-help-btn:hover {
 	background-color: var(--pantheon-bg-color-dark-1) !important;
 
 	filter: invert(1);
+	opacity: .8;
 
 	transition:
 		background-color var(--pantheon-anim-fast) ease,
+		opacity var(--pantheon-anim-fast) ease,
 		border-color var(--pantheon-anim-fast) ease !important;
 }
 
 ._captcha-keyboard-button:hover {
 	border: var(--pantheon-border-dark-2);
 	background-color: var(--pantheon-bg-color-dark-2) !important;
+	opacity: 1;
 }
 
 ._captcha-keyboard ._captcha-keyboard-button[disabled] {
@@ -2932,3 +2935,13 @@ font[color="red"] {
 .warningbox a:hover{
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
+
+/*
+._captcha-keyboard-icon {
+	transition: scale var(--pantheon-anim-fast) ease;
+}
+
+._captcha-keyboard-icon:hover {
+	scale: 1.07;
+}
+*/
