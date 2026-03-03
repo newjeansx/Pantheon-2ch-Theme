@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.1.3
+   Version: 1.1.4
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -50,6 +50,23 @@ body::after {
 	background: var(--pantheon-bg-overlay);
 }
 
+html { 
+	position: relative; 
+}
+
+html::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 220px;
+	pointer-events: none;
+	z-index: -1;
+
+	background: var(--pantheon-bg-gradient-2);
+}
+
 /* ===== Переменные Makaba ===== */
 
 
@@ -57,13 +74,13 @@ html:root {
 	--theme_default_bg: var(--pantheon-theme);
 	--theme_default_postbg: var(--pantheon-bg-color-light-1);
 	--theme_default_postbghighlight: var(--pantheon-bg-color-light-3);
-	--theme_default_spectext: #fff;
+	--theme_default_spectext: var(--pantheon-color-white);
 	--theme_default_postnum: #c8c8c8;
 	--theme_default_border: var(--pantheon-border-light-1);
 	--theme_default_text: #e0e0e0;
 	--theme_default_alttext: #cac8c8;
 	--theme_default_link: var(--pantheon-theme);
-	--theme_default_hover: #fff;
+	--theme_default_hover: var(--pantheon-color-white);
 	--theme_default_title: var(--pantheon-theme);
 	--theme_default_drag: #fff3;
 	--theme_default_spoiler: rgba(255,255,255,0.27);
@@ -74,7 +91,7 @@ html:root {
 	--theme_default_altbtnbg: rgba(255,254,255,0.03);
 	--theme_default_btnbghover: var(--pantheon-bg-color-light-3);
 	--theme_default_altbtnbghover: rgba(255,254,255,0.03);
-	--theme_default_inputtext: #ccc;
+	--theme_default_inputtext: var(--pantheon-color-gray-2);
 	--theme_nmswitch: none;
 	--theme_mpborder: rgba(255,254,255,0.03);
 	--theme_mubtn: rgba(255,254,255,0.03);
@@ -97,7 +114,7 @@ html:root {
 	--pantheon-bg-color-dark-2: rgba(0,0,0,0.14);
 	--pantheon-bg-color-dark-3: rgba(0,0,0,0.28);
 	--pantheon-bg-gradient-1: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.02) 30%, transparent 60%);
-	--pantheon-bg-gradient-2: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0));
+	--pantheon-bg-gradient-2: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
 
 	--pantheon-blur-1: blur(1px);
 	--pantheon-blur-2: blur(3px);
@@ -132,6 +149,11 @@ html:root {
 	--pantheon-anim-fast: .15s;
 	--pantheon-anim-normal: .2s;
 	--pantheon-anim-slow: .3s;
+	
+	--pantheon-color-gray-1: #d7d7d7;
+	--pantheon-color-gray-2: #ccc;
+	--pantheon-color-white: #fff;
+	--pantheon-color-black: #000;
 }
 
 
@@ -161,7 +183,7 @@ html:root {
 .header__menu a,
 .header__opts a,
 .newpost__wrapper a {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 }
 
 .header__menu a:hover,
@@ -175,6 +197,7 @@ html:root {
 }
 
 .header__title a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
 
@@ -232,6 +255,7 @@ html:root {
 }
 
 .plashque a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
 
@@ -359,7 +383,7 @@ html[data-style="gurochan"] body::after {
 	padding: 75px;
 
 	text-align: center;
-	color: #fff;
+	color: var(--pantheon-color-white);
 	font-family: Inter, sans-serif;
 	font-size: 18px;
 	line-height: 1.6;
@@ -497,11 +521,13 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 }
 
 .tti a {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 90%, black);
 	background-color: var(--pantheon-bg-color-dark-1);
 }
 
 .tti a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 85%, white);
 }
 
@@ -612,7 +638,7 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 	font-size: 14px;
 	font-weight: 600;
 
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 	cursor: pointer;
 
 	transition:
@@ -658,15 +684,13 @@ html[data-theme="nightmode"] #js-nightmode:hover::before {
 
 /* ===== Информация о теме ===== */
 
-.footer {
-	background: var(--pantheon-bg-gradient-2);
-}
-
 .footer a {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 95%, black);
 }
 
 .footer a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 85%, white);
 }
 
@@ -698,7 +722,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.3\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.4\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -764,7 +788,7 @@ a[href*="liveinternet.ru"] img {
 .bb__header_new {
 	padding: 3px 20px;
 	font-size: 14px;
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 	cursor: pointer;
 	
 	transition: color var(--pantheon-anim-fast) ease;
@@ -832,7 +856,7 @@ a[href*="liveinternet.ru"] img {
 }
 
 .bb__panels a {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 }
 
 .bb__panels a:hover {
@@ -949,6 +973,7 @@ svg.fav__fa:hover,
 
 .post_type_reply a:hover,
 .post_type_oppost a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
 
@@ -963,6 +988,7 @@ svg.fav__fa:hover,
 	left: 10px;
 	
 	border-top: var(--pantheon-border-light-3);
+	border-left: 2px dashed var(--pantheon-theme);
 	border-left: 2px dashed color-mix(in srgb, var(--pantheon-theme) 85%, black);
 	background-color: var(--pantheon-bg-color-light-3);
 }
@@ -970,6 +996,7 @@ svg.fav__fa:hover,
 .post_type_watched,
 .post_type_highlight {
 	border-top: var(--pantheon-border-light-3);
+	border-left: 2px solid var(--pantheon-theme);
 	border-left: 2px solid color-mix(in srgb, var(--pantheon-theme) 85%, black);
 	background-color: var(--pantheon-bg-color-light-3);	
 }
@@ -984,6 +1011,7 @@ svg.fav__fa:hover,
 	display: inline-block;
 	
 	background: linear-gradient( to right, var(--pantheon-bg-color-light-3), rgba(255,255,255,0) );
+	border-left: 2px solid var(--pantheon-theme);
 	border-left: 2px solid color-mix(in srgb, var(--pantheon-theme) 95%, black);
 	border-radius: 4px;
 	margin: 5px 10px 5px 10px;
@@ -994,6 +1022,7 @@ svg.fav__fa:hover,
 }
 
 .qr_reply .qr__footer a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
 
@@ -1077,7 +1106,7 @@ svg.fav__fa:hover,
 .post__icon:has(img[src*="yglogo"]),
 .post__icon:has(img[src*="bvnditlogo"]),
 .post__icon:has(img[src*="ARTMS1logo"]) {
-	background-color: #000;
+	background-color: var(--pantheon-color-black);
 }
 
 .post__icon:has(img[src*="XINlogo"]),
@@ -1088,13 +1117,13 @@ svg.fav__fa:hover,
 .post__icon:has(img[src*="nmixxlogo"]),
 .post__icon:has(img[src*="Lightsumlogo"]),
 .post__icon:has(img[src*="pantheonlogo"]) {
-	background-color: #000;
+	background-color: var(--pantheon-color-black);
 	padding: 1px;
 }
 
 .post__icon:has(img[src*="aespalogo"]),
 .post__icon:has(img[src*="BabyDontCrylogo"]) {
-	background-color: #000;
+	background-color: var(--pantheon-color-black);
 	padding: 2px;
 }
 
@@ -1112,12 +1141,12 @@ svg.fav__fa:hover,
 
 .post__icon:has(img[src*="wacklogo"]),
 .post__icon:has(img[src*="dialogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding-top: 2px;
 }
 
 .post__icon:has(img[src*="jyplogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 3px;
 }
 
@@ -1143,7 +1172,7 @@ svg.fav__fa:hover,
 .post__icon:has(img[src*="rvlogo"]),
 .post__icon:has(img[src*="momolandlogo"]),
 .post__icon:has(img[src*="wglogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 }
 
 .post__icon:has(img[src*="twicelogo"]),
@@ -1176,7 +1205,7 @@ svg.fav__fa:hover,
 .post__icon:has(img[src*="loopalogo"]),
 .post__icon:has(img[src*="fromis_9logo"]),
 .post__icon:has(img[src*="gflogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 1px;
 }
 
@@ -1190,27 +1219,27 @@ svg.fav__fa:hover,
 .post__icon:has(img[src*="lovelyzlogo"]),
 .post__icon:has(img[src*="Loosemblelogo"]),
 .post__icon:has(img[src*="cherrybletlogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 2px;
 }
 
 .post__icon:has(img[src*="wjsnlogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 0 0 0 1px;
 }
 
 .post__icon:has(img[src*="KiiiKiiilogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 3px;
 }
 
 .post__icon:has(img[src*="cubelogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 2px 2px 1px 2px;
 }
 
 .post__icon:has(img[src*="ninemuseslogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding: 1px 1px 2px 1px;
 }
 
@@ -1225,12 +1254,12 @@ svg.fav__fa:hover,
 }
 
 .post__icon:has(img[src*="guglogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding-top: 2px;
 }
 
 .post__icon:has(img[src*="ivelogo"]) {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	padding-left: 2px;
 }
 
@@ -1449,7 +1478,7 @@ svg.fav__fa:hover,
 	z-index: 2;
 	pointer-events: none;
 
-	background: #ccc;
+	background: var(--pantheon-color-gray-2);
 	clip-path: polygon(0 0, 100% 50%, 0 100%);
 	transform: translateX(2px);
 
@@ -1464,7 +1493,7 @@ svg.fav__fa:hover,
 }
 
 .post__image-link:has(.post__file-webm):hover::after {
-	background-color: #fff;
+	background-color: var(--pantheon-color-white);
 	transform: translateX(2px) scale(1.15);
 }
 
@@ -1492,6 +1521,7 @@ svg.fav__fa:hover,
 
 .neuroslop {
 	border-radius: var(--pantheon-radius-2);
+	border-left: 2px solid var(--pantheon-theme);
 	border-left: 2px solid color-mix(in srgb, var(--pantheon-theme) 85%, black);
 	background-color: var(--pantheon-bg-color-light-1);
 	box-shadow: var(--pantheon-shadow-1);
@@ -1608,7 +1638,7 @@ svg.fav__fa:hover,
 }
 
 ._captcha-stub-title {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 }
 
 /* ===== Панель - Выбрано ===== */
@@ -1639,6 +1669,7 @@ svg.fav__fa:hover,
 }
 
 .rules a:hover {
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
 
@@ -1654,8 +1685,8 @@ svg.fav__fa:hover,
 	width: 20px !important;
 	height: 20px !important;
 
-	background-color: #000;
-	color: #fff !important;
+	background-color: var(--pantheon-color-black);
+	color: var(--pantheon-color-white) !important;
 	font-size: 14px;
 
 	opacity: .5;
@@ -1696,7 +1727,7 @@ body ._captcha-help-btn {
 body ._captcha-help-btn:hover {
 	border: var(--pantheon-border-dark-2) !important;
 	background-color: var(--pantheon-bg-color-dark-2) !important;
-	color: #000 !important;
+	color: var(--pantheon-color-black) !important;
 }
 
 /* ===== Иконки ===== */
@@ -1759,7 +1790,7 @@ body ._captcha-help-btn:hover {
 	backdrop-filter: var(--pantheon-blur-2);
 	-webkit-backdrop-filter: var(--pantheon-blur-2);
 
-	color: #ccc;
+	color: var(--pantheon-color-gray-2);
 }
 
 .captcha__msg-timeout {
@@ -1781,7 +1812,7 @@ body ._captcha-help-btn:hover {
 
 .captcha__actions .captcha__actions-text {
 	font-size: 12px !important;
-	color: #ccc;
+	color: var(--pantheon-color-gray-2);
 	cursor: default;
 }
 
@@ -1903,7 +1934,7 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 }
 
 .cntnt__main .tn a {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 }
 
 .cntnt__main .tn a:hover {
@@ -1934,8 +1965,8 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 	width: 10px;
 	height: 10px;
 
-	border-left: 2px solid #d7d7d7;
-	border-bottom: 2px solid #d7d7d7;
+	border-left: 2px solid var(--pantheon-color-gray-1);
+	border-bottom: 2px solid var(--pantheon-color-gray-1);
 
 	transform: rotate(45deg);
 	transform-origin: center;
@@ -1975,18 +2006,16 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 /* ===== Статистика ===== */
 
 .autorefresh  {
-	color: #ccc;
-}
-
-.cntnt__main .tn__item.desktop {
-	color: #fff0;
-	text-shadow: none;
+	color: var(--pantheon-color-gray-2);
 }
 
 .cntnt__main .tn__item.desktop {
     display: flex;
     align-items: center;
     gap: 4px;
+	
+	color: #fff0;
+	text-shadow: none;
 }
 
 .tn__item.desktop span:has(input) {
@@ -2006,7 +2035,7 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
 .tn span[title="Постеры"] {
 	display: inline;
 	padding: 2px 9px 2px 2px;
-	color: #ccc;
+	color: var(--pantheon-color-gray-2);
 	
 	border-radius: var(--pantheon-radius-2);
 	border: var(--pantheon-border-light-1);
@@ -2132,6 +2161,7 @@ textarea[name="comment"] {
 	padding: 2px;
 	
 	border: var(--pantheon-border-light-1);
+	-webkit-backdrop-filter: var(--pantheon-blur-2);
 	backdrop-filter: var(--pantheon-blur-2);
 }
 
@@ -2151,9 +2181,8 @@ textarea[name="comment"] {
 	transition: .18s ease;
 	pointer-events: none;
 	
+	-webkit-backdrop-filter: var(--pantheon-blur-1);
 	backdrop-filter: var(--pantheon-blur-1);
-}
-.postform__sticker-prev::after img {
 }
 
 .postform__sticker-prev:hover::after {
@@ -2169,7 +2198,7 @@ textarea[name="comment"] {
 /* ===== Форма — Элементы - Стикеры ===== */
 
 .stickerpack-name a {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 	transition: color var(--pantheon-anim-fast) ease;
 }
 
@@ -2178,7 +2207,7 @@ textarea[name="comment"] {
 }
 
 #frequent-stickers .stickerpack-name {
-	color: #d7d7d7;
+	color: var(--pantheon-color-gray-1);
 	transition: color var(--pantheon-anim-fast) ease;
 }
 
@@ -2192,6 +2221,7 @@ textarea[name="comment"] {
 }
 
 .stickerpack-name:hover .stickerpack-meta {
+	color: var(--pantheon-theme);
     color: color-mix(in srgb, var(--pantheon-theme) 75%, white);
 }
 
@@ -2289,7 +2319,7 @@ textarea[name="comment"] {
 }
 
 .js-icon-select option {
-	background: #fff;
+	background: var(--pantheon-color-white);
 }
 
 /* ===== Прикрепить файл ===== */
@@ -2470,7 +2500,7 @@ textarea[name="comment"] {
 .plashque__close:hover::before {
 	border: var(--pantheon-border-light-3);
 	background-color: var(--pantheon-bg-color-dark-1);
-	color: #fff;
+	color: var(--pantheon-color-white);
 }
 
 /* ===== Меню ===== */
@@ -2703,7 +2733,7 @@ td img {
 
 input.ah__del,
 input.ah__export {
-	background-color: #d7d7d7;
+	background-color: var(--pantheon-color-gray-1);
 }
 
 .hiderules-table-row-delete-btn,
@@ -2884,7 +2914,7 @@ input[type="checkbox"]::after {
 	width: 4px;
 	height: 8px;
 
-	border: solid #ccc;
+	border: solid var(--pantheon-color-gray-2);
 	border-width: 0 2px 2px 0;
 
 	opacity: 0;
@@ -2933,15 +2963,6 @@ font[color="red"] {
 }
 
 .warningbox a:hover{
+	color: var(--pantheon-theme);
 	color: color-mix(in srgb, var(--pantheon-theme) 80%, white);
 }
-
-/*
-._captcha-keyboard-icon {
-	transition: scale var(--pantheon-anim-fast) ease;
-}
-
-._captcha-keyboard-icon:hover {
-	scale: 1.07;
-}
-*/
