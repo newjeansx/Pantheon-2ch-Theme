@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.1.4
+   Version: 1.1.5
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -722,7 +722,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.4\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.5\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
@@ -2013,9 +2013,17 @@ body .captcha__msg-timeout .captcha__msg-timeout-counter {
     display: flex;
     align-items: center;
     gap: 4px;
-	
-	color: #fff0;
 	text-shadow: none;
+}
+
+.cntnt__main .tn {
+	font-size: 0;
+}
+
+.cntnt__main .tn a,
+.cntnt__main .tn span,
+.cntnt__main .tn input {
+	font-size: 13px;
 }
 
 .tn__item.desktop span:has(input) {
