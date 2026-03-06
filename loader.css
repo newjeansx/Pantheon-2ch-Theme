@@ -1,7 +1,7 @@
 /* 
    Pantheon Theme 2ch
    Author: мур
-   Version: 1.1.6
+   Version: 1.1.7
    Git: github.com/newjeansx
    Contact: newjeansx@proton.me
 */
@@ -48,23 +48,6 @@ body::after {
 	pointer-events: none;
 
 	background: var(--pantheon-bg-overlay);
-}
-
-html { 
-	position: relative; 
-}
-
-html::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 220px;
-	pointer-events: none;
-	z-index: -1;
-
-	background: var(--pantheon-bg-gradient-2);
 }
 
 /* ===== Переменные Makaba ===== */
@@ -722,7 +705,7 @@ a[href*="liveinternet.ru"] img {
 
 .footer__info::after {
 	content: 
-		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.6\A"
+		"Тема Pantheon создана мур для ПАНТЕОНА KPOP БОГИНЬ / github.com/newjeansx / 1.1.7\A"
 		"Обратная связь: newjeansx@proton.me";
 	display: block;
 	margin-top: 14px;
